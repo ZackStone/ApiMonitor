@@ -8,6 +8,8 @@ namespace ApiMonitor
     {
         private const string CONFIG_FILES_PATH = @"C:\manu\Programs\api-monitor\config-files\";
 
+        private const int INTERVAL_IN_SECONDS = 10;
+
         private readonly NotifyIcon trayIcon;
         private readonly ContextMenuStrip trayMenu;
 
@@ -38,7 +40,7 @@ namespace ApiMonitor
 
             timer = new Timer();
             timer.Tick += new EventHandler(TimerEventHandler);
-            timer.Interval = 60 * 1000; // in miliseconds
+            timer.Interval = INTERVAL_IN_SECONDS * 1000; // in miliseconds
             timer.Start();
         }
 

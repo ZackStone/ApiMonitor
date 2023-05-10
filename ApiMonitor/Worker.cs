@@ -18,6 +18,7 @@ namespace ApiMonitor
         public static async Task Work(string path)
         {
             var fileNameList = Directory.GetFiles(path);
+            fileNameList = fileNameList.Where(x => x.EndsWith(".json")).ToArray();
             var tasks = fileNameList.Select(x => InternalWork(x));
             await Task.WhenAll(tasks);
         }
