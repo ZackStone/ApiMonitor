@@ -11,16 +11,16 @@ Send requests to check if the configured APIs are up.
 Defined in the class `RequestConfig`.
 ```json
 {
-	"Id": "some identifier",
-	"Uri": "https://myurl.dev/some/some?query=value",
-	"Method": "GET",
-	"Auth": {
-		"Username": "usr",
-		"Password": "pwd"
-	},
-	"Headers": {
-		"someheader": "abc",
-		"someotherheader": "def"
-	}
+  "Id": "some identifier",
+  "Uri": "https://myurl.dev/some/some?query=value",
+  "Method": "GET",
+  "Auth": {
+    "Username": "usr",
+    "Password": "pwd"
+  },
+  "Headers": {
+    "someheader": "abc",
+    "someotherheader": "def"
+  }
 }
 ```
